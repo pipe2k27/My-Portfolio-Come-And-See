@@ -406,33 +406,13 @@ a:hover {
   background-color: #0f0329;
 }
 
-.big {
-  position: absolute;
-  height: 210px;
-  width: 262px;
-  top: 22px;
-  transition: background-color 300ms, height 300ms ease-out, width 300ms ease-out, top 300ms;
-}
-
 .logo {
   width: 210px;
+  height: auto;
   position: relative;
   top: 50%;
-  transform: translatey(-50%);
+  transform: translateY(-50%);
   transition: none;
-}
-
-.logo-sm {
-  width: 140px;
-  position: relative;
-  top: 50%;
-  left: 32.5%;
-  transform: translate(-50%, -50%);
-}
-
-.move-up {
-  transition: all 0.5s;
-  top: 30%;
 }
 
 .language {
@@ -445,11 +425,33 @@ a:hover {
   transition: none;
 }
 
-.appear {
-  top: 100px;
-  opacity: 100;
-  width: 130px;
-  transition: all 0.5s;
+@media (max-width:768px) {
+  .logo {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media(min-width:768px) {
+  .big {
+    position: absolute;
+    height: 210px;
+    width: 262px;
+    top: 22px;
+    transition: background-color 300ms, height 300ms ease-out, width 300ms ease-out, top 300ms;
+  }
+
+  .move-up {
+    transition: all 0.5s;
+    top: 30%;
+  }
+
+  .appear {
+    top: 100px;
+    opacity: 100;
+    width: 130px;
+    transition: all 0.5s;
+  }
 }
 
 /* last section  */
