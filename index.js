@@ -84,7 +84,20 @@ $(".pe").hover(function() {
 
 });
 
+function mover() {
+  $(".rocket-holder").addClass("moved");
+  setTimeout(function() {
+    $(".rocket-holder").removeClass("moved");
+  }, 900);
+  setTimeout(function() {
+    mover();
+  }, 1800);
 
-$(".ins").on("click",function(){
-  window.open("https://www.instagram.com/casamoma/","" );
+}
+
+mover();
+
+
+$(".ins").on("click", function() {
+  window.open("https://www.instagram.com/casamoma/", "");
 });
